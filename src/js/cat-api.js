@@ -11,7 +11,7 @@ export function fetchBreeds() {
     .then(response => response.data)
     .catch(error => {
       console.log(error);
-      throw error;
+      throw new Error(error.status);
     });
 }
 
@@ -21,6 +21,6 @@ export function fetchCatByBreed(breedId) {
     .then(response => response.data)
     .catch(error => {
       console.log(error);
-      throw error;
+      throw new Error(error.status);
     });
 }
